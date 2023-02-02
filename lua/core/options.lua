@@ -15,17 +15,17 @@ local opt = vim.opt
 -- Global variables
 local g = vim.g
 local s = vim.s
-local indent = 4
+local indent = 2
 
 cmd([[
 	filetype plugin indent on
 ]])
 
-opt.backspace = {'eol', 'start', 'indent'} -- allow backspacing over everything in insert mode
+opt.backspace = { 'eol', 'start', 'indent' } -- allow backspacing over everything in insert mode
 opt.clipboard = 'unnamedplus' -- allow neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 opt.encoding = 'utf-8' -- the encoding
-opt.matchpairs = {'(:)', '{:}', '[:]', '<:>'}
+opt.matchpairs = { '(:)', '{:}', '[:]', '<:>' }
 opt.syntax = 'enable'
 
 -- indention
@@ -41,7 +41,7 @@ opt.shiftround = true -- use multiple of shiftwidth when indenting with '<' and 
 opt.hlsearch = true -- highlight all matches on previous search pattern
 opt.ignorecase = true -- ignore case in search patterns
 opt.smartcase = true -- smart case
-opt.wildignore = opt.wildignore + {'*/node_modules/*', '*/.git/*', '*/vendor/*'}
+opt.wildignore = opt.wildignore + { '*/node_modules/*', '*/.git/*', '*/vendor/*' }
 opt.wildmenu = true -- make tab completion for files/buffers act like bash
 
 -- ui
@@ -51,11 +51,11 @@ opt.lazyredraw = true -- don't update the display while executing macros
 opt.list = true
 -- You can also add 'space' or 'eol', but I feel it's quite annoying
 opt.listchars = {
-    tab = '┊ ',
-    trail = '·',
-    extends = '»',
-    precedes = '«',
-    nbsp = '×'
+  tab = '┊ ',
+  trail = '·',
+  extends = '»',
+  precedes = '«',
+  nbsp = '×'
 }
 
 -- Hide cmd line
@@ -77,9 +77,9 @@ opt.swapfile = false -- creates a swapfile
 opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
 -- autocomplete
-opt.completeopt = {'menu', 'menuone', 'noselect'} -- mostly just for cmp
+opt.completeopt = { 'menu', 'menuone', 'noselect' } -- mostly just for cmp
 opt.shortmess = opt.shortmess + {
-    c = true
+  c = true
 } -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
 
 -- By the way, -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline.
@@ -109,26 +109,26 @@ opt.foldmethod = 'marker'
 opt.foldlevel = 99
 
 -- Disable builtin plugins
-local disabled_built_ins = {"2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin",
-                            "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
-                            "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
-                            "synmenu", "optwin", "compiler", "bugreport", "ftplugin"}
+local disabled_built_ins = { "2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin",
+  "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
+  "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
+  "synmenu", "optwin", "compiler", "bugreport", "ftplugin" }
 
 for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 1
 end
 
 -- Colorscheme override
 g.onedark_color_overrides = {
-  green = { gui = "#B8DE85", cterm ="114", cterm16 ="2" },
-  cyan = { gui = "#56B6C2", cterm ="38", cterm16 ="6" },
+  green = { gui = "#B8DE85", cterm = "114", cterm16 = "2" },
+  cyan = { gui = "#56B6C2", cterm = "38", cterm16 = "6" },
   background = { gui = "NONE", cterm = "NONE", cterm16 = "NONE" },
-  comment_grey = { gui = "#5C6370", cterm ="59", cterm16 ="7" },
-  gutter_fg_grey = { gui = "#4B5263", cterm ="238", cterm16 ="8" },
-  cursor_grey = { gui = "#2C323C", cterm ="236", cterm16 ="0" },
-  menu_grey = { gui = "NONE", cterm = "NONE", cterm16 ="NONE" },
-  special_grey = { gui = "#3B4048", cterm ="238", cterm16 ="7" },
-  vertsplit = { gui = "#3E4452", cterm ="59", cterm16 ="7" },
+  comment_grey = { gui = "#5C6370", cterm = "59", cterm16 = "7" },
+  gutter_fg_grey = { gui = "#4B5263", cterm = "238", cterm16 = "8" },
+  cursor_grey = { gui = "#2C323C", cterm = "236", cterm16 = "0" },
+  menu_grey = { gui = "NONE", cterm = "NONE", cterm16 = "NONE" },
+  special_grey = { gui = "#3B4048", cterm = "238", cterm16 = "7" },
+  vertsplit = { gui = "#3E4452", cterm = "59", cterm16 = "7" },
 };
 
 
