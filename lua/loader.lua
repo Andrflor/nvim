@@ -134,7 +134,7 @@ return packer.startup({
     use 'lewis6991/gitsigns.nvim'
 
     -- Colorizer
-    use 'norcalli/nvim-colorizer.lua'
+    use 'NvChad/nvim-colorizer.lua'
 
     -- Telescope
     -- Find, Filter, Preview, Pick. All lua, all the time.
