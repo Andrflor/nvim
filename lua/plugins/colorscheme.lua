@@ -20,9 +20,9 @@ require("onedarkpro").setup({
     cyan   = '#56B6C2',
     green  = "#B8DE85",
     blue   = '#51afef',
-    red    = '#e54958',
-    orange = "#c08555",
-    yellow = "#edcd86"
+    red    = '#e05c65',
+    yellow = '#ffcb6b',
+    orange = "#e08555",
   },
   highlights = {
     Error = {

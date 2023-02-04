@@ -20,7 +20,7 @@ colors.cyan    = '#56B6C2'
 colors.green   = "#B8DE85"
 colors.blue    = '#51afef'
 colors.red     = '#e05c65'
-colors.yellow  = "#edcd86"
+colors.yellow  = '#ffcb6b'
 colors.error   = colors.red
 colors.magenta = colors.purple
 
