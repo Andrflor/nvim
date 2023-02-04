@@ -9,31 +9,33 @@
 -- File: plugins/colorscheme.lua
 -- Description: Colorscheme config
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
-require("github-theme").setup({
-    theme_style = "dark",
-    function_style = "italic",
-    sidebars = {"qf", "vista_kind", "terminal", "packer"},
+require("onedarkpro").setup({
 
-    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-    colors = {
-        hint = "orange",
-        error = "#ff0000"
+  options = {
+    transparency = true
+  },
+
+  -- Colorscheme override
+  colors = {
+    cyan   = '#56B6C2',
+    green  = "#B8DE85",
+    blue   = '#51afef',
+    red    = '#e54958',
+    orange = "#c08555",
+    yellow = "#edcd86"
+  },
+  highlights = {
+    Error = {
+      fg = "#e05c65",
     },
-
-    -- Overwrite the highlight groups
-    overrides = function(c)
-        return {
-            htmlTag = {
-                fg = c.red,
-                bg = "#282c34",
-                sp = c.hint,
-                style = "underline"
-            },
-            DiagnosticHint = {
-                link = "LspDiagnosticsDefaultHint"
-            },
-            -- this will remove the highlight groups
-            TSField = {}
-        }
-    end
+    Pmenu = {
+      bg = "None",
+    },
+    PmenuSel = {
+      bg = "#3e3059"
+    },
+    PmenuThumb = {
+      bg = "#c678dd"
+    }
+  }
 })

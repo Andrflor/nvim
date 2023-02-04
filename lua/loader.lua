@@ -65,9 +65,9 @@ return packer.startup({
     -- Flutter lsp
     use 'akinsho/flutter-tools.nvim'
 
-    -- OneDark - A clean, dark Neovim theme written in Lua, with support for lsp,
+    -- OneDark Pro - A clean, dark Neovim theme written in Lua, with support for lsp,
     -- treesitter and lots of plugins. Includes additional themes for Kitty, Alacritty, iTerm and Fish.
-    use "joshdick/onedark.vim"
+    use "olimorris/onedarkpro.nvim"
 
     -- Github - Github's Neovim themes
     use 'projekt0n/github-nvim-theme'

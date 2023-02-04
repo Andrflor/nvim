@@ -123,23 +123,5 @@ end
 -- Remove lsp pane kind name
 g.code_action_menu_show_action_kind = false
 
--- Colorscheme override
-g.onedark_color_overrides = {
-  green = { gui = "#B8DE85", cterm = "114", cterm16 = "2" },
-  cyan = { gui = "#56B6C2", cterm = "38", cterm16 = "6" },
-  background = { gui = "NONE", cterm = "NONE", cterm16 = "NONE" },
-  comment_grey = { gui = "#5C6370", cterm = "59", cterm16 = "7" },
-  gutter_fg_grey = { gui = "#4B5263", cterm = "238", cterm16 = "8" },
-  cursor_grey = { gui = "#2C323C", cterm = "236", cterm16 = "0" },
-  menu_grey = { gui = "NONE", cterm = "NONE", cterm16 = "NONE" },
-  special_grey = { gui = "#3B4048", cterm = "238", cterm16 = "7" },
-  vertsplit = { gui = "#3E4452", cterm = "59", cterm16 = "7" },
-};
-
 -- By default, use onedark
 cmd('colorscheme onedark')
-
--- Pmenu ovverides
-
-cmd('hi PmenuSel ctermfg=NONE ctermbg=60 guifg=NONE guibg=#5e5079 guisp=NONE cterm=NONE gui=NONE')
-cmd('hi PmenuThumb ctermfg=NONE ctermbg=60 guifg=NONE guibg=#c678dd guisp=NONE cterm=NONE gui=NONE')

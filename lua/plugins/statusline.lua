@@ -13,19 +13,16 @@
 local lualine = require('lualine')
 local lualine_require = require('lualine_require')
 
-local colors = {
-  bg       = NONE,
-  fg       = '#bbc2cf',
-  yellow   = '#D19A66',
-  cyan     = '#56B6C2',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#e06c75',
-}
+-- Colors overrides from theme
+local colors   = require("onedarkpro.helpers").get_colors()
+colors.bg      = "None"
+colors.cyan    = '#56B6C2'
+colors.green   = "#B8DE85"
+colors.blue    = '#51afef'
+colors.red     = '#e05c65'
+colors.yellow  = "#edcd86"
+colors.error   = colors.red
+colors.magenta = colors.purple
 
 local conditions = {
   buffer_not_empty = function()
