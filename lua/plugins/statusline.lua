@@ -11,7 +11,6 @@
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 -- Credit: shadmansaleh & his evil theme: https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
 local lualine = require('lualine')
-local lualine_require = require('lualine_require')
 
 -- Colors overrides from theme
 local colors   = require("onedarkpro.helpers").get_colors()

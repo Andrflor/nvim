@@ -98,12 +98,6 @@ return packer.startup({
     -- Better icons in lsp window
     use "onsails/lspkind.nvim"
 
-    -- Trouble for pretty code errors
-    use {
-      "folke/trouble.nvim",
-      requires = "nvim-tree/nvim-web-devicons",
-    }
-
     -- Autopairs
     use {
       'windwp/nvim-autopairs',

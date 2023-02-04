@@ -25,12 +25,13 @@ require("onedarkpro").setup({
     orange = "#e08555",
   },
   highlights = {
-    Error = {
-      fg = "#e05c65",
-    },
     Pmenu = {
       bg = "None",
     },
+    DiagnosticUnderlineError = { sp = "${red}", style = "undercurl" },
+    DiagnosticUnderlineWarn = { sp = "${yellow}", style = "undercurl" },
+    DiagnosticUnderlineInfo = { sp = "${blue}", style = "undercurl" },
+    DiagnosticUnderlineHint = { sp = "${cyan}", style = "undercurl" },
     PmenuSel = {
       bg = "#3e3059"
     },
