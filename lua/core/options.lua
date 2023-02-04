@@ -21,6 +21,7 @@ cmd([[
 	filetype plugin indent on
 ]])
 
+
 opt.backspace = { 'eol', 'start', 'indent' } -- allow backspacing over everything in insert mode
 opt.clipboard = 'unnamedplus' -- allow neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
@@ -84,6 +85,7 @@ opt.shortmess = opt.shortmess + {
 
 -- By the way, -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline.
 opt.showmode = false
+opt.ph = 12
 
 -- perfomance
 -- remember N lines in history
@@ -118,6 +120,9 @@ for _, plugin in pairs(disabled_built_ins) do
   g["loaded_" .. plugin] = 1
 end
 
+-- Remove lsp pane kind name
+g.code_action_menu_show_action_kind = false
+
 -- Colorscheme override
 g.onedark_color_overrides = {
   green = { gui = "#B8DE85", cterm = "114", cterm16 = "2" },
@@ -130,7 +135,6 @@ g.onedark_color_overrides = {
   special_grey = { gui = "#3B4048", cterm = "238", cterm16 = "7" },
   vertsplit = { gui = "#3E4452", cterm = "59", cterm16 = "7" },
 };
-
 
 -- By default, use onedark
 cmd('colorscheme onedark')

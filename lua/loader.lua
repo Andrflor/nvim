@@ -95,6 +95,9 @@ return packer.startup({
       }
     }
 
+    -- Better icons in lsp window
+    use "onsails/lspkind.nvim"
+
     -- Trouble for pretty code errors
     use {
       "folke/trouble.nvim",

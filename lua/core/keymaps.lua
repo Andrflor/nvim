@@ -11,10 +11,10 @@
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 vim.g.mapleader = ' '
 -- Move around splits
-vim.keymap.set('n', '<leader>wh', '<C-w>h', {})
-vim.keymap.set('n', '<leader>wj', '<C-w>j', {})
-vim.keymap.set('n', '<leader>wk', '<C-w>k', {})
-vim.keymap.set('n', '<leader>wl', '<C-w>l', {})
+vim.keymap.set('n', '<leader>h', '<C-w>h', {})
+vim.keymap.set('n', '<leader>j', '<C-w>j', {})
+vim.keymap.set('n', '<leader>k', '<C-w>k', {})
+vim.keymap.set('n', '<leader>l', '<C-w>l', {})
 
 -- Reload configuration without restart nvim
 vim.keymap.set('n', '<leader>r', ':so %<CR>', {})
@@ -34,9 +34,14 @@ vim.keymap.set('n', '<leader>ef', ':NvimTreeFindFile<CR>', {}) -- search file
 
 -- Lsp config
 vim.keymap.set('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', {})
+vim.keymap.set('n', 'J', '<Cmd>lua vim.lsp.buf.references()<CR>', {})
 vim.keymap.set('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', {})
+vim.keymap.set('n', '<leader>s', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {})
+vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', {})
+vim.keymap.set('n', '<leader>d', '<Cmd>lua vim.lsp.diagnostic.open_float()<CR>', {})
+
 vim.keymap.set('n', '<leader>a', ':CodeActionMenu<CR>', {})
 
 
 vim.keymap.set('n', '<leader>n', ':tabe<CR>', {})
-vim.keymap.set('n', '<leader>d', ':bd<CR>', {})
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', {})
