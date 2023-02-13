@@ -55,6 +55,16 @@ autocmd({ 'BufNewFile', 'BufRead' }, {
   command = 'set filetype=c'
 })
 
+autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.vert',
+  command = 'set filetype=glsl'
+})
+
+autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.frag',
+  command = 'set filetype=glsl'
+})
+
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
   pattern = '',
