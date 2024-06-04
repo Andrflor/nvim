@@ -11,14 +11,15 @@
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or 'all'
-    ensure_installed = {'go', 'python', 'dockerfile', 'json', 'yaml', 'markdown', 'html', 'scss', 'css', 'vim'},
+    ensure_installed = {'go', 'python', 'dockerfile', 'json', 'yaml', 'markdown', 'html', 'scss', 'css', 'vim', 'dart'},
 
     highlight = {
         enable = true,
-        use_languagetree = true
+        use_languagetree = false,
+        additional_vim_regex_highlighting = false
     },
     indent = {
-        enable = true
+        enable = false
     },
     autotag = {
         enable = true

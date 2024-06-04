@@ -10,7 +10,7 @@
 -- Description: LSP setup and config
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'sumneko_lua' }
+local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'lua_ls', 'rust_analyzer'}
 require("mason").setup()
 require("mason-lspconfig").setup({
   -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
@@ -143,7 +143,4 @@ cmp.setup {
   } }
 }
 
-require("indent_blankline").setup {
-  space_char_blankline = " ",
-  show_current_context = true,
-}
+ require("ibl").setup {}
