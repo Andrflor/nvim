@@ -56,12 +56,7 @@ return packer.startup({
     use { 'williamboman/mason.nvim' }
     use { 'williamboman/mason-lspconfig.nvim' }
 
-    use {
-      "aznhe21/actions-preview.nvim",
-      config = function()
-        vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
-      end,
-    }
+    use "aznhe21/actions-preview.nvim"
 
     -- Flutter lsp
     use 'akinsho/flutter-tools.nvim'

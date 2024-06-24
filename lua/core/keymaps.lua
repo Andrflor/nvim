@@ -41,7 +41,7 @@ vim.keymap.set('n', '<leader>s', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {}
 vim.keymap.set('n', '<leader>rn', '<Cmd>lua vim.lsp.buf.rename()<CR>', {})
 vim.keymap.set('n', '<leader>d', '<Cmd>lua vim.lsp.diagnostic.open_float()<CR>', {})
 
-vim.keymap.set('n', '<leader>a', ':CodeActionMenu<CR>', {})
+vim.keymap.set({ "v", "n" }, "<leader>a", require("actions-preview").code_actions)
 
 
 vim.keymap.set('n', '<leader>n', ':tabe<CR>', {})
