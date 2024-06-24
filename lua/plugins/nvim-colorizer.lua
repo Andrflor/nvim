@@ -17,3 +17,9 @@ require('colorizer').setup({
     AARRGGBB = true,
   }
 })
+
+require('mini.ai').setup()
+require('rainbow-delimiters.setup').setup()
+require("spider").setup {
+	skipInsignificantPunctuation = false,
+}

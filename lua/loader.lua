@@ -94,13 +94,11 @@ return packer.startup({
     -- Better icons in lsp window
     use "onsails/lspkind.nvim"
 
+    -- Custom text objects
+    use "echasnovski/mini.ai"
+
     -- Autopairs
-    use {
-      'windwp/nvim-autopairs',
-      config = function()
-        require('nvim-autopairs').setup {}
-      end
-    }
+    use 'windwp/nvim-autopairs'
 
     use "tveskag/nvim-blame-line"
 
@@ -128,6 +126,12 @@ return packer.startup({
 
     -- Colorizer
     use 'NvChad/nvim-colorizer.lua'
+
+    use 'HiPhish/rainbow-delimiters.nvim'
+
+
+    -- Camel Case motion
+    use  "chrisgrieser/nvim-spider"
 
     -- Telescope
     -- Find, Filter, Preview, Pick. All lua, all the time.
