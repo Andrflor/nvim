@@ -147,6 +147,9 @@ return packer.startup({
       requires = { 'nvim-telescope/telescope.nvim' }
     }
 
+    -- Workspace diagnostics
+    use 'folke/trouble.nvim'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

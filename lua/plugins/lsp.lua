@@ -10,7 +10,8 @@
 -- Description: LSP setup and config
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'lua_ls', 'rust_analyzer'}
+local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'lua_ls', 'rust_analyzer', 'hls', 'tsserver'}
+
 require("mason").setup()
 require("mason-lspconfig").setup({
   -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
@@ -122,6 +123,8 @@ cmp.setup {
     end, { 'i', 's' })
   }),
   sources = { {
+    name = 'copilot'
+  }, {
     name = 'nvim_lsp'
   }, {
     name = 'luasnip'
@@ -144,3 +147,24 @@ cmp.setup {
 }
 
  require("ibl").setup {}
+local highlight = {
+    "RainbowRed",
+    "RainbowYellow",
+    "RainbowBlue",
+    "RainbowOrange",
+    "RainbowGreen",
+    "RainbowViolet",
+    "RainbowCyan",
+}
+local hooks = require "ibl.hooks"
+-- create the highlight groups in the highlight setup hook, so they are reset
+-- every time the colorscheme changes
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+    vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+    vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+    vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+    vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+    vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+    vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+end)
