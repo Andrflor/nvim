@@ -10,7 +10,7 @@
 -- Description: LSP setup and config
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'lua_ls', 'rust_analyzer', 'hls', 'tsserver'}
+local servers = { 'dockerls', 'bashls', 'gopls', 'pyright', 'jsonls', 'vimls', 'yamlls', 'clangd', 'lua_ls', 'rust_analyzer', 'tsserver', 'ols'}
 
 require("mason").setup()
 require("mason-lspconfig").setup({

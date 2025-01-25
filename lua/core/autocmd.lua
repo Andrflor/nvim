@@ -41,7 +41,7 @@ autocmd('BufEnter', {
 -- Auto format on save using the attached (optionally filtered) language servere clients
 -- https://neovim.io/doc/user/lsp.html#vim.lsp.buf.format()
 autocmd('BufWritePre', {
-  pattern = '*.dart, *.json',
+  pattern = { "*.dart", "*.json", "*.odin" },
   command = ':silent lua vim.lsp.buf.format()'
 })
 
