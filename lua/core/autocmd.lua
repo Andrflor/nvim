@@ -51,12 +51,7 @@ autocmd({ 'BufNewFile', 'BufRead' }, {
 })
 
 autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.vert',
-  command = 'set filetype=glsl'
-})
-
-autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.frag',
+  pattern = {'*.frag', '*.vert', '*.comp'},
   command = 'set filetype=glsl'
 })
 
