@@ -11,6 +11,14 @@
 -- Author: Florian Andrieu <andrieu.florian@mail.com>
 vim.g.mapleader = ' '
 -- Move around splits
+vim.keymap.set('', 'k', 'j', { noremap = true })
+vim.keymap.set('', '<C-w>k', '<C-w>j', { noremap = true })
+vim.keymap.set('', '<C-w><C-k>', '<C-w>j', { noremap = true })
+
+vim.keymap.set('', 'j', 'k', { noremap = true })
+vim.keymap.set('', '<C-w>j', '<C-w>k', { noremap = true })
+vim.keymap.set('', '<C-w><C-j>', '<C-w>k', { noremap = true })
+
 vim.keymap.set('n', '<leader>h', '<C-w>h', {})
 vim.keymap.set('n', '<leader>j', '<C-w>j', {})
 vim.keymap.set('n', '<leader>k', '<C-w>k', {})
