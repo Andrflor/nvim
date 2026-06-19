@@ -45,6 +45,27 @@ for _, lsp in ipairs(servers) do
   end
 end
 
+-- Syntact LSP (custom, built from source, not on Mason)
+local syntact_config = {
+  cmd = { vim.fn.expand("~/project/syntact/lsp/lsp") },
+  filetypes = { "syntact" },
+  root_markers = { "CLAUDE.md", ".git" },
+  capabilities = capabilities,
+}
+if use_new_api then
+  vim.lsp.config("syntact", syntact_config)
+  vim.lsp.enable("syntact")
+else
+  require("lspconfig.configs").syntact = {
+    default_config = {
+      cmd = syntact_config.cmd,
+      filetypes = syntact_config.filetypes,
+      root_dir = require("lspconfig.util").root_pattern("CLAUDE.md", ".git"),
+    },
+  }
+  require("lspconfig").syntact.setup({ capabilities = capabilities })
+end
+
 -- luasnip
 local luasnip = require("luasnip")
 

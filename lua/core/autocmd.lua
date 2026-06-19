@@ -55,6 +55,11 @@ autocmd({ 'BufNewFile', 'BufRead' }, {
   command = 'set filetype=glsl'
 })
 
+autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.syn',
+  command = 'set filetype=syntact'
+})
+
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
   pattern = '',
