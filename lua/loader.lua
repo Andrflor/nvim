@@ -138,7 +138,7 @@ return packer.startup({
     -- Find, Filter, Preview, Pick. All lua, all the time.
     use {
       'nvim-telescope/telescope.nvim',
-      branch = '0.1.x',
+      branch = 'master',
       requires = { 'nvim-lua/plenary.nvim' }
     }
     use {
